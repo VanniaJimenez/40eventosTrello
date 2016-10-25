@@ -31,9 +31,11 @@
  		botonCrear.onclick= function (){
  			var textarea = document.createElement("textarea");
  			div.appendChild(textarea);
- 			botonCrear.className = "bloque";
+ 			textarea.className = "bloque";
+ 	
 
- 		}
+
+ 		};
  	};
 
  };
