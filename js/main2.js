@@ -10,6 +10,11 @@
  	button.className = "btn btn-primary";
  	divmadre.appendChild(input);
  	divmadre.appendChild(button);
+ 	var bienvenido = document.getElementById("bienvenido");
+ 	var simplon = document.getElementById("simplon");
+ 	bienvenido.style.display ="none";
+ 	simplon.style.display= "none";
+ 	boton.style.display ="none";
 
  	button.onclick =function(){
  		
@@ -32,8 +37,20 @@
  			var textarea = document.createElement("textarea");
  			div.appendChild(textarea);
  			textarea.className = "bloque";
- 	
+ 			var botoncito = document.createElement("button");
+ 			div.appendChild(botoncito);
+ 			botoncito.className="btn ";
+ 			botoncito.innerHTML = "crear tarea";
 
+ 			botoncito.onclick = function(){
+ 				var textito = textarea.value;
+ 				var parrafo = document.createElement("p");
+ 				var texta= document.createTextNode(textito);
+ 				parrafo.appendChild(texta);
+ 				div.appendChild(parrafo);
+ 				botoncito.style.display ="none";
+ 				textarea.style.display ="none";
+ 			};
 
  		};
  	};
